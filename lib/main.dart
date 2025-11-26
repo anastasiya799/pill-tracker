@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/medication_list_screen.dart';
+import 'screens/add_medication_screen.dart';
+import 'screens/medication_detail_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,7 +18,11 @@ class MainApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: MedicationListScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MedicationListScreen(),
+        '/add': (context) => AddMedicationScreen(),
+      },
     );
   }
 }
