@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-# pill_tracker
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-#  Medication Tracker 
+#  Pill Tracker 
 
 ##  Краткое описание
 Мобильное приложение для отслеживания приема лекарств и управления расписанием medication. Простой и удобный трекер с напоминаниями.
@@ -55,4 +37,3 @@ AddMedication (← из MedicationList)
 2. Заполняет форму с данными лекарства
 3. Устанавливает расписание приема
 4. Сохраняет - лекарство появляется в списке
->>>>>>> f008f4b7cfb1c73e40833e70e8418d73dbf22d51
