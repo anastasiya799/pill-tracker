@@ -1,6 +1,5 @@
 name: pill_tracker
-description: "pill-tracker"
-publish_to: 'none'
+description: "Pill Tracker - приложение для отслеживания приема лекарств"
 version: 1.0.0+1
 
 environment:
