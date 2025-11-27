@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/medication_list_screen.dart';
-import 'screens/add_medication_screen.dart';
-import 'screens/medication_detail_screen.dart';
+import 'package:provider/provider.dart';
+import 'presentation/screens/medication_list_screen.dart';
+import 'presentation/view_models/medication_list_view_model.dart';
+import 'presentation/view_models/weather_view_model.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,17 +13,19 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Pill Tracker',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => MedicationListViewModel()),
+        ChangeNotifierProvider(create: (context) => WeatherViewModel()),
+      ],
+      child: MaterialApp(
+        title: 'Pill Tracker',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          useMaterial3: true,
+        ),
+        home: const MedicationListScreen(),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => MedicationListScreen(),
-        '/add': (context) => AddMedicationScreen(),
-      },
     );
   }
 }
